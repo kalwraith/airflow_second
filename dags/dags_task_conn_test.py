@@ -3,7 +3,7 @@ from airflow import DAG
 from airflow.operators.empty import EmptyOperator
 from datetime import datetime
 
-with DAG(dag_id='dags_task_conntest',
+with DAG(dag_id='dags_task_conn_test',
           start_date=datetime(2023,2,16),
           schedule_interval=None,
           catchup=False
@@ -39,9 +39,9 @@ with DAG(dag_id='dags_task_conntest',
     t8 = EmptyOperator(
         task_id='dummy_t8',
     )
-    
+
     t1 >> t2
-    t2 >> t3
+    t1 >> t3
     t2 >> t4
     t3 >> t4
     t5 >> t4
