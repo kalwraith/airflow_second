@@ -9,6 +9,7 @@ def sample_function(**kwargs):
     address_value = kwargs['address']
     print('name:' + name_value)
     print('address:' + address_value)
+    print(kwargs)
 
 with DAG(
     dag_id='dags_python_operator',
