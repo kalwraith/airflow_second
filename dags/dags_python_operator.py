@@ -9,7 +9,10 @@ def sample_function(**kwargs):
     address_value = kwargs['address']
     print('name:' + name_value)
     print('address:' + address_value)
-    print(kwargs)
+    data_interval_start = kwargs['data_interval_start']
+    data_interval_end = kwargs['data_interval_end']
+    print('data_interval_start:' + str(data_interval_start))
+    print('data_interval_end:' + str(data_interval_end))
 
 with DAG(
     dag_id='dags_python_operator',
